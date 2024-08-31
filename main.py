@@ -8,11 +8,19 @@ from sqlalchemy.orm import Session
 app = FastAPI()
 models.Base.metadata.create_all(bind=engine)
 
-class Recipe(BaseModel):
+class RecipeCreate(BaseModel):
     title: str
     description: str
     ingredients: List[str]
     steps: List[str]
+    image: str
+
+class Recipe(BaseModel):
+    id: int
+    title: str
+    description: str
+    ingredients: list = []
+    steps: list = []
     image: str
 
 def get_db():
@@ -37,7 +45,7 @@ async def get_recipe(recipe_id: int, db: db_dependency):
     return recipe
 
 @app.post("/recipes/", response_model=Recipe)
-async def create_recipe(recipe: Recipe, db: db_dependency):
+async def create_recipe(recipe: RecipeCreate, db: db_dependency):
     db_recipe = models.Recipes(title=recipe.title, description=recipe.description, ingredients=recipe.ingredients, steps=recipe.steps, image=recipe.image)
     db.add(db_recipe)
     db.commit()
