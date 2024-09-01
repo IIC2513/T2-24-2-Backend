@@ -1,6 +1,6 @@
 # T2-24-2-Backend
 
-Para utilizar esta API, deben ingresar al siguiente link: REDACTED. Aquí, podrán encontrar toda la documentación de la API necesaria para la realización de la tarea.
+Para utilizar esta API, deben usar la siguiente url base: https://t2-24-2-backend.onrender.com. Aquí, podrán encontrar toda la documentación de la API necesaria para la realización de la tarea. En el endpoint `/docs` está la documentación de la API.
 
 ## ¿Cómo correr la API?
 
