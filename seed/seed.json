@@ -1,0 +1,18 @@
+{
+    "recipes": [
+          {
+            "title": "Choclo",
+            "description": "Choclo",
+            "ingredients": ["Choclo"],
+            "steps": [],
+            "image": "https://example.com/image.jpg"
+          },
+          {
+            "title": "Chicle de Choclo",
+            "description": "Chicle hecho de choclo",
+            "ingredients": ["Choclo", "Chicle"],
+            "steps": [],
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThrZxdTqsMvb9S5A8TZfBYgPDVy0A7Ovi8zQ&s"
+          }
+    ]
+}

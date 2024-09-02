@@ -4,8 +4,25 @@ from typing import List, Annotated, Optional
 import models.recipe as models
 from config.database import SessionLocal, engine
 from sqlalchemy.orm import Session
+from sqlalchemy import event
+from contextlib import asynccontextmanager
+from apscheduler.schedulers.background import BackgroundScheduler
+from seed.seed import seed_db, seed_table
 
-app = FastAPI()
+async def start_scheduler():
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(seed_db, 'interval', hours=1)
+    scheduler.start()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await seed_db()
+    await start_scheduler()
+    yield
+
+event.listen(models.Recipes.__table__, 'after_create', seed_table)
+
+app = FastAPI(lifespan=lifespan)
 models.Base.metadata.create_all(bind=engine)
 
 def verify_token(authorization: Optional[str] = Header(None)):
