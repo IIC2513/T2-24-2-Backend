@@ -31,7 +31,7 @@ app = FastAPI(lifespan=lifespan)
 models.Base.metadata.create_all(bind=engine)
 
 def verify_token(authorization: Optional[str] = Header(None)):
-    if authorization is None or not authorization.startswith("Bearer "):
+    if authorization is None or not authorization.startswith("Bearer panconqueso"):
         raise HTTPException(status_code=401, detail="Missing or invalid authorization header")
 
 class RecipeCreate(BaseModel):
