@@ -11,6 +11,7 @@ from seed.seed import seed_db, seed_table
 from pydantic import Field
 from typing import List, Optional
 from fastapi import FastAPI, HTTPException, Query
+from sqlalchemy import func
 
 
 async def start_scheduler():
@@ -91,6 +92,18 @@ async def get_recipe(recipe_id: int, db: db_dependency, token: token_dependency)
     if recipe is None:
         raise HTTPException(status_code=404, detail="Recipe not found")
     return recipe
+
+@app.get("/recipes/ingredients/", response_model=List[Recipe])
+async def get_recipes_by_ingredients(
+    db: db_dependency,
+    token: token_dependency,
+    ingredients: List[str] = Query(..., alias="ingredients"),
+):
+    ingredient_list = [f"%{ingredient}%" for ingredient in ingredients]
+    recipes = db.query(models.Recipes).filter(
+        func.array_to_string(models.Recipes.ingredients, ',').ilike(func.concat(*ingredient_list))
+    ).all()
+    return recipes
 
 @app.post("/recipes/", response_model=Recipe)
 async def create_recipe(recipe: RecipeCreate, db: db_dependency, token: token_dependency):
