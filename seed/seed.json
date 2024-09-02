@@ -1,144 +1,291 @@
 {
   "recipes": [
     {
-      "title": "Spaghetti Carbonara",
-      "description": "Un plato clásico de pasta italiana hecho con huevos, queso, panceta y pimienta.",
-      "ingredients": ["Spaghetti", "Huevos", "Queso parmesano", "Panceta", "Pimienta negra"],
-      "steps": ["Hervir la pasta", "Cocinar la panceta", "Mezclar huevos y queso", "Combinar la pasta con la panceta", "Añadir la mezcla de huevos"],
-      "image": "https://example.com/spaghetti-carbonara.jpg",
-      "categories": ["Pasta", "Italiano"],
-      "evaluation": 4.5,
-      "preparation_time": "30 minutos"
-    },
-    {
-      "title": "Ensalada César",
-      "description": "Una ensalada fresca y crujiente con lechuga romana, crutones, queso parmesano y aderezo César.",
-      "ingredients": ["Lechuga romana", "Crutones", "Queso parmesano", "Aderezo César", "Pechuga de pollo (opcional)"],
-      "steps": ["Lavar y cortar la lechuga", "Añadir crutones y queso parmesano", "Agregar el aderezo César", "Incorporar el pollo si se desea"],
-      "image": "https://example.com/ensalada-cesar.jpg",
-      "categories": ["Ensalada", "Italiano"],
-      "evaluation": 4.0,
-      "preparation_time": "15 minutos"
-    },
-    {
-      "title": "Tacos de Pollo",
-      "description": "Deliciosos tacos rellenos de pollo sazonado, acompañados de salsa y guacamole.",
-      "ingredients": ["Tortillas de maíz", "Pollo", "Cilantro", "Cebolla", "Salsa", "Guacamole"],
-      "steps": ["Cocinar el pollo con especias", "Calentar las tortillas", "Rellenar las tortillas con pollo", "Agregar cilantro, cebolla, salsa y guacamole"],
-      "image": "https://example.com/tacos-de-pollo.jpg",
-      "categories": ["Mexicano", "Tacos"],
-      "evaluation": 4.7,
-      "preparation_time": "25 minutos"
-    },
-    {
-      "title": "Paella de Mariscos",
-      "description": "Una tradicional paella española hecha con arroz, mariscos frescos y azafrán.",
-      "ingredients": ["Arroz", "Caldo de pescado", "Mariscos (gambas, mejillones, calamares)", "Azafrán", "Pimientos", "Guisantes"],
-      "steps": ["Cocinar los mariscos", "Añadir el arroz y el azafrán", "Incorporar el caldo de pescado", "Añadir pimientos y guisantes", "Cocinar a fuego lento hasta que el arroz esté listo"],
-      "image": "https://example.com/paella-de-mariscos.jpg",
-      "categories": ["Español", "Mariscos"],
-      "evaluation": 4.8,
-      "preparation_time": "1 hora"
-    },
-    {
-      "title": "Churrasco a lo Pobre",
-      "description": "Un plato tradicional chileno que incluye carne de res, papas fritas, cebolla caramelizada, y un huevo frito.",
-      "ingredients": ["Carne de res", "Papas fritas", "Cebolla", "Huevos", "Aceite", "Sal"],
-      "steps": ["Cocinar la carne a la parrilla", "Freír las papas", "Caramelizar la cebolla", "Freír los huevos", "Servir todo junto en un plato"],
-      "image": "https://example.com/churrasco-a-lo-pobre.jpg",
-      "categories": ["Chileno", "Carnes"],
-      "evaluation": 4.6,
-      "preparation_time": "40 minutos"
-    },
-    {
       "title": "Empanadas de Pino",
-      "description": "Empanadas chilenas rellenas de carne, cebolla, huevo duro, aceitunas y pasas.",
-      "ingredients": ["Harina", "Carne molida", "Cebolla", "Huevos duros", "Aceitunas", "Pasas"],
-      "steps": ["Preparar la masa", "Cocinar el relleno de carne y cebolla", "Rellenar la masa con carne, huevo, aceitunas y pasas", "Cerrar y hornear las empanadas"],
-      "image": "https://example.com/empanadas-de-pino.jpg",
-      "categories": ["Chileno", "Empanadas"],
-      "evaluation": 4.5,
-      "preparation_time": "1 hora"
-    },
-    {
-      "title": "Pizza Margherita",
-      "description": "Pizza clásica italiana con tomate, mozzarella y albahaca fresca.",
-      "ingredients": ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca", "Aceite de oliva", "Sal"],
-      "steps": ["Precalentar el horno", "Extender la masa", "Añadir tomate y mozzarella", "Hornear", "Agregar albahaca y aceite de oliva"],
-      "image": "https://example.com/pizza-margherita.jpg",
-      "categories": ["Pizza", "Italiano"],
-      "evaluation": 4.4,
-      "preparation_time": "30 minutos"
-    },
-    {
-      "title": "Sushi",
-      "description": "Sushi tradicional japonés con pescado fresco y arroz sazonado.",
-      "ingredients": ["Arroz para sushi", "Vinagre de arroz", "Pescado fresco", "Alga nori", "Salsa de soya", "Jengibre encurtido"],
-      "steps": ["Preparar el arroz", "Cortar el pescado", "Enrollar el sushi", "Cortar en piezas", "Servir con salsa de soya y jengibre"],
-      "image": "https://example.com/sushi.jpg",
-      "categories": ["Japonés", "Sushi"],
-      "evaluation": 4.9,
-      "preparation_time": "45 minutos"
-    },
-    {
-      "title": "Hamburguesa Clásica",
-      "description": "Una hamburguesa clásica con carne de res, queso, lechuga, tomate y mayonesa.",
-      "ingredients": ["Pan de hamburguesa", "Carne de res", "Queso", "Lechuga", "Tomate", "Mayonesa"],
-      "steps": ["Cocinar la carne", "Tostar el pan", "Armar la hamburguesa con todos los ingredientes", "Servir caliente"],
-      "image": "https://example.com/hamburguesa-clasica.jpg",
-      "categories": ["Americano", "Hamburguesa"],
-      "evaluation": 4.6,
-      "preparation_time": "20 minutos"
-    },
-    {
-      "title": "Sopa de Tomate",
-      "description": "Una sopa suave y cremosa hecha con tomates frescos y albahaca.",
-      "ingredients": ["Tomates", "Cebolla", "Ajo", "Caldo de verduras", "Albahaca", "Crema"],
-      "steps": ["Cocinar los tomates y la cebolla", "Añadir el caldo y cocinar a fuego lento", "Licuar la sopa", "Añadir crema y albahaca", "Servir caliente"],
-      "image": "https://example.com/sopa-de-tomate.jpg",
-      "categories": ["Sopa", "Vegetariano"],
-      "evaluation": 4.3,
-      "preparation_time": "40 minutos"
-    },
-    {
-      "title": "Brownies de Chocolate",
-      "description": "Brownies suaves y masticables con un intenso sabor a chocolate.",
-      "ingredients": ["Chocolate", "Mantequilla", "Azúcar", "Huevos", "Harina", "Cacao en polvo"],
-      "steps": ["Derretir el chocolate y la mantequilla", "Mezclar con azúcar y huevos", "Añadir la harina y el cacao", "Hornear", "Dejar enfriar y cortar en cuadros"],
-      "image": "https://example.com/brownies-de-chocolate.jpg",
-      "categories": ["Postre", "Chocolate"],
+      "description": "Empanadas rellenas de carne, cebolla, huevo duro, aceitunas y pasas.",
+      "ingredients": ["Carne molida", "Cebolla", "Huevo duro", "Aceitunas", "Pasas", "Masa para empanadas"],
+      "steps": ["Preparar el pino", "Rellenar la masa", "Hornear las empanadas"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Empanadas-web-1-570x458.jpg",
+      "categories": ["Tradicional", "Frito"],
       "evaluation": 4.8,
-      "preparation_time": "45 minutos"
+      "preparation_time_in_minutes": 90
     },
     {
-      "title": "Ceviche de Pescado",
-      "description": "Un plato peruano de pescado crudo marinado en jugo de limón y mezclado con cebolla, cilantro y ají.",
-      "ingredients": ["Pescado blanco", "Limón", "Cebolla", "Cilantro", "Ají", "Sal"],
-      "steps": ["Cortar el pescado en cubos", "Marinar en jugo de limón", "Añadir cebolla, cilantro y ají", "Servir frío"],
-      "image": "https://example.com/ceviche-de-pescado.jpg",
-      "categories": ["Peruano", "Mariscos"],
+      "title": "Cazuela Chilena",
+      "description": "Sopa tradicional de carne de res o pollo con papas, zapallo, choclo y arroz.",
+      "ingredients": ["Carne de res o pollo", "Papas", "Zapallo", "Choclo", "Arroz"],
+      "steps": ["Hervir la carne", "Agregar las verduras", "Cocinar hasta que esté listo"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2011/03/cazuela_de_vacuno.jpg",
+      "categories": ["Sopa", "Tradicional"],
       "evaluation": 4.7,
-      "preparation_time": "20 minutos"
+      "preparation_time_in_minutes": 120
     },
     {
-      "title": "Risotto de Champiñones",
-      "description": "Un risotto cremoso con champiñones salteados y queso parmesano.",
-      "ingredients": ["Arroz arborio", "Champiñones", "Caldo de pollo", "Queso parmesano", "Cebolla", "Vino blanco"],
-      "steps": ["Sofreír la cebolla y los champiñones", "Añadir el arroz y el vino blanco", "Incorporar el caldo gradualmente", "Añadir queso parmesano"],
-      "image": "https://example.com/risotto-de-champinones.jpg",
-      "categories": ["Italiano", "Arroz"],
+      "title": "Curanto en Olla",
+      "description": "Plato típico de la isla de Chiloé, cocido en una olla con mariscos, carne, papas y chapaleles.",
+      "ingredients": ["Mariscos", "Carne de cerdo", "Papas", "Chapaleles", "Longaniza"],
+      "steps": ["Preparar los ingredientes", "Cocinar en una olla grande", "Servir caliente"],
+      "image": "https://www.example.com/curanto_en_olla.jpg",
+      "categories": ["Tradicional", "Chilote"],
+      "evaluation": 4.9,
+      "preparation_time_in_minutes": 180
+    },
+    {
+      "title": "Charquicán",
+      "description": "Guiso de carne deshidratada o fresca con papas, zapallo, choclo y otras verduras.",
+      "ingredients": ["Carne deshidratada o fresca", "Papas", "Zapallo", "Choclo", "Zanahoria"],
+      "steps": ["Cocinar la carne", "Agregar las verduras", "Guisar hasta que esté listo"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Charquic%C3%A1n-web.jpg",
+      "categories": ["Guiso", "Tradicional"],
+      "evaluation": 4.5,
+      "preparation_time_in_minutes": 90
+    },
+    {
+      "title": "Pastel de Choclo",
+      "description": "Pastel al horno con una base de pino y cubierta de choclo molido.",
+      "ingredients": ["Carne molida", "Choclo", "Cebolla", "Huevo duro", "Pasas"],
+      "steps": ["Preparar el pino", "Hacer la mezcla de choclo", "Hornear"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/choclos-570x458.jpg",
+      "categories": ["Horno", "Tradicional"],
+      "evaluation": 4.8,
+      "preparation_time_in_minutes": 120
+    },
+    {
+      "title": "Humitas",
+      "description": "Masa de choclo molido envuelta en hojas de choclo y cocida al vapor.",
+      "ingredients": ["Choclo", "Cebolla", "Albahaca", "Manteca", "Leche"],
+      "steps": ["Moler el choclo", "Preparar la mezcla", "Envolver en hojas de choclo", "Cocer al vapor"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2012/01/Humitas-e1325692985982.jpg",
+      "categories": ["Tradicional", "Vapor"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 150
+    },
+    {
+      "title": "Porotos Granados",
+      "description": "Guiso de porotos con choclo, zapallo y albahaca.",
+      "ingredients": ["Porotos", "Choclo", "Zapallo", "Albahaca", "Cebolla"],
+      "steps": ["Cocinar los porotos", "Agregar el choclo y el zapallo", "Condimentar con albahaca y cocinar"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Porotos-Granados-web.jpg",
+      "categories": ["Guiso", "Tradicional"],
       "evaluation": 4.6,
-      "preparation_time": "30 minutos"
+      "preparation_time_in_minutes": 90
     },
     {
-      "title": "Tarta de Manzana",
-      "description": "Una tarta clásica con una base de masa quebrada, relleno de manzanas y canela, y una cubierta crujiente.",
-      "ingredients": ["Masa quebrada", "Manzanas", "Azúcar", "Canela", "Harina", "Mantequilla"],
-      "steps": ["Forrar un molde con la masa", "Cortar las manzanas y mezclar con azúcar y canela", "Colocar las manzanas en la masa", "Hornear", "Agregar la cubierta de harina y mantequilla"],
-      "image": "https://example.com/tarta-de-manzana.jpg",
-      "categories": ["Postre", "Frutas"],
+      "title": "Sopaipillas",
+      "description": "Masa frita hecha con harina y zapallo, servida con pebre o chancaca.",
+      "ingredients": ["Harina", "Zapallo", "Aceite", "Sal"],
+      "steps": ["Hacer la masa", "Cortar en discos", "Freír"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2021/06/SOPAIPILLAS-570x458.jpg",
+      "categories": ["Frito", "Tradicional"],
       "evaluation": 4.4,
-      "preparation_time": "1 hora"
+      "preparation_time_in_minutes": 60
+    },
+    {
+      "title": "Calzones Rotos",
+      "description": "Masa dulce frita espolvoreada con azúcar flor.",
+      "ingredients": ["Harina", "Huevos", "Azúcar", "Aceite", "Polvo de hornear"],
+      "steps": ["Hacer la masa", "Cortar y dar forma", "Freír y espolvorear con azúcar"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/calzones3-570x458.jpg",
+      "categories": ["Dulce", "Tradicional"],
+      "evaluation": 4.3,
+      "preparation_time_in_minutes": 60
+    },
+    {
+      "title": "Paila Marina",
+      "description": "Sopa de mariscos típica de las costas chilenas.",
+      "ingredients": ["Mariscos", "Cebolla", "Ajo", "Vino blanco", "Cilantro"],
+      "steps": ["Cocinar los mariscos", "Agregar el vino y el cilantro", "Servir caliente"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Paila-Marina-ajustada-web-570x458.jpg",
+      "categories": ["Sopa", "Mariscos"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 60
+    },
+    {
+      "title": "Chacarero",
+      "description": "Sándwich chileno con carne, porotos verdes, tomate y ají verde.",
+      "ingredients": ["Pan", "Carne de res", "Porotos verdes", "Tomate", "Ají verde"],
+      "steps": ["Cocinar la carne", "Preparar los vegetales", "Armar el sándwich"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2019/04/Chacarero-edit.jpg",
+      "categories": ["Sándwich", "Tradicional"],
+      "evaluation": 4.5,
+      "preparation_time_in_minutes": 30
+    },
+
+    {
+      "title": "Pastel de Jaiba",
+      "description": "Pastel al horno hecho con carne de jaiba, pan rallado y crema.",
+      "ingredients": ["Carne de jaiba", "Pan rallado", "Cebolla", "Crema", "Queso parmesano"],
+      "steps": ["Preparar la mezcla de jaiba", "Colocar en moldes", "Hornear"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Pastel-de-jaiba-video.jpg",
+      "categories": ["Horno", "Mariscos"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 75
+    },
+    {
+      "title": "Lomo Saltado",
+      "description": "Plato peruano-chileno con lomo de res, cebolla, tomate y papas fritas.",
+      "ingredients": ["Lomo de res", "Cebolla", "Tomate", "Papas", "Salsa de soya"],
+      "steps": ["Freír la carne", "Saltear las verduras", "Agregar la salsa y las papas"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2012/07/lomo-saltado-picante.jpg",
+      "categories": ["Carne", "Tradicional"],
+      "evaluation": 4.6,
+      "preparation_time_in_minutes": 45
+    },
+
+    {
+      "title": "Mote con Huesillos",
+      "description": "Postre chileno hecho de mote de trigo con duraznos deshidratados en almíbar.",
+      "ingredients": ["Mote de trigo", "Huesillos (duraznos deshidratados)", "Azúcar", "Agua"],
+      "steps": ["Hervir los huesillos con azúcar", "Cocer el mote", "Servir frío"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2017/08/Mote-con-huesillo.jpg",
+      "categories": ["Postre", "Tradicional"],
+      "evaluation": 4.9,
+      "preparation_time_in_minutes": 120
+    },
+    {
+      "title": "Pan Amasado",
+      "description": "Pan casero chileno hecho a mano y cocido en horno o sartén.",
+      "ingredients": ["Harina", "Levadura", "Sal", "Agua", "Manteca"],
+      "steps": ["Mezclar los ingredientes", "Amasar la masa", "Cocer en horno o sartén"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2017/10/Pan-Amasado-570x458.jpg",
+      "categories": ["Pan", "Tradicional"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 90
+    },
+    {
+      "title": "Caldillo de Congrio",
+      "description": "Sopa tradicional chilena de congrio cocida con papas, cebolla y zanahoria.",
+      "ingredients": ["Congrio", "Papas", "Cebolla", "Zanahoria", "Cilantro"],
+      "steps": ["Cocinar el congrio", "Agregar las verduras", "Condimentar y servir"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Receta-Caldillo.jpg",
+      "categories": ["Sopa", "Mariscos"],
+      "evaluation": 4.8,
+      "preparation_time_in_minutes": 60
+    },
+
+    {
+      "title": "Milcao",
+      "description": "Masa frita o cocida hecha de papas ralladas y cocidas, tradicional de Chiloé.",
+      "ingredients": ["Papas", "Manteca", "Chicharrones", "Sal"],
+      "steps": ["Rallar las papas", "Mezclar con los ingredientes", "Freír o cocer"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2018/09/milcao-editada.jpg",
+      "categories": ["Tradicional", "Chilote"],
+      "evaluation": 4.5,
+      "preparation_time_in_minutes": 90
+    },
+    {
+      "title": "Porotos con Riendas",
+      "description": "Guiso de porotos con fideos, zapallo y longaniza.",
+      "ingredients": ["Porotos", "Fideos", "Zapallo", "Longaniza", "Cebolla"],
+      "steps": ["Cocinar los porotos", "Agregar los fideos y el zapallo", "Añadir la longaniza y cocinar"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/DSC04085-e1603217444150.jpg",
+      "categories": ["Guiso", "Tradicional"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 120
+    },
+    {
+      "title": "Chancho en Piedra",
+      "description": "Salsa tradicional chilena hecha con tomates, ají, ajo y cebolla.",
+      "ingredients": ["Tomates", "Ají", "Ajo", "Cebolla", "Cilantro"],
+      "steps": ["Moler todos los ingredientes", "Mezclar bien", "Servir con pan amasado"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2018/09/chancho-en-piedra-editada.jpg",
+      "categories": ["Salsa", "Tradicional"],
+      "evaluation": 4.6,
+      "preparation_time_in_minutes": 30
+    },
+    {
+      "title": "Leche Asada",
+      "description": "Postre chileno similar al flan, hecho de leche, azúcar y huevos, cocido al horno.",
+      "ingredients": ["Leche", "Huevos", "Azúcar", "Vainilla"],
+      "steps": ["Mezclar los ingredientes", "Verter en moldes", "Hornear hasta dorar"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2018/03/Leche-Asada-Web.jpg",
+      "categories": ["Postre", "Tradicional"],
+      "evaluation": 4.8,
+      "preparation_time_in_minutes": 60
+    },
+    {
+      "title": "Picarones",
+      "description": "Postre chileno hecho con una masa frita de zapallo, servida con miel de chancaca.",
+      "ingredients": ["Zapallo", "Harina", "Levadura", "Aceite", "Miel de chancaca"],
+      "steps": ["Hacer la masa", "Freír en forma de anillos", "Servir con miel de chancaca"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2015/07/picarones.jpg",
+      "categories": ["Postre", "Frito"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 90
+    },
+    {
+      "title": "Charquicán",
+      "description": "Guiso de carne seca (charqui) o carne molida, papas, zapallo y otras verduras.",
+      "ingredients": ["Carne molida o charqui", "Papas", "Zapallo", "Cebolla", "Choclo", "Porotos verdes"],
+      "steps": ["Cocinar la carne", "Añadir las verduras y hervir", "Mezclar y servir caliente"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Charquic%C3%A1n-web.jpg",
+      "categories": ["Guiso", "Tradicional"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 60
+    },
+
+    {
+      "title": "Tomaticán",
+      "description": "Guiso de tomate y choclo con carne de vacuno, típico de la cocina chilena.",
+      "ingredients": ["Tomate", "Choclo", "Carne de vacuno", "Cebolla", "Pimentón", "Ajo"],
+      "steps": ["Cocinar la carne", "Añadir las verduras", "Guisar a fuego lento", "Servir caliente"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2014/12/Tomatican.jpg",
+      "categories": ["Guiso", "Tradicional"],
+      "evaluation": 4.5,
+      "preparation_time_in_minutes": 40
+    },
+
+    {
+      "title": "Pantruca",
+      "description": "Sopa con masas de harina cocidas en caldo con carne y verduras.",
+      "ingredients": ["Harina", "Carne de vacuno", "Zanahoria", "Papas", "Cebolla", "Ajo"],
+      "steps": ["Preparar la masa y cortar en trozos", "Cocinar la carne y verduras", "Agregar las pantrucas al caldo"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Pantrucas-Editada-Web.jpg",
+      "categories": ["Sopa", "Tradicional"],
+      "evaluation": 4.4,
+      "preparation_time_in_minutes": 60
+    },
+    {
+      "title": "Budín de pan",
+      "description": "Postre tradicional hecho a base de pan duro, leche, azúcar y especias.",
+      "ingredients": ["Pan duro", "Leche", "Azúcar", "Huevos", "Canela", "Vainilla"],
+      "steps": ["Remojar el pan en leche", "Mezclar con azúcar y especias", "Hornear hasta dorar"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2020/10/budin-de-pan-570x343.jpg",
+      "categories": ["Postre", "Tradicional"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 90
+    },
+
+    {
+      "title": "Papas Rellenas",
+      "description": "Papas rellenas de carne, cebolla, huevo duro y condimentos, empanizadas y fritas.",
+      "ingredients": ["Papas", "Carne molida", "Cebolla", "Huevo duro", "Pan rallado", "Aceite"],
+      "steps": ["Preparar el relleno", "Rellenar las papas", "Empanizar y freír"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/Papas_Rellenas_video_Retoques_01-570x458.jpg",
+      "categories": ["Frito", "Tradicional"],
+      "evaluation": 4.5,
+      "preparation_time_in_minutes": 60
+    },
+
+    {
+      "title": "Cazuela de Ave",
+      "description": "Sopa de pollo con papas, zapallo, choclo y arroz.",
+      "ingredients": ["Pollo", "Papas", "Zapallo", "Choclo", "Arroz"],
+      "steps": ["Hervir el pollo", "Agregar las verduras y el arroz", "Cocinar hasta que esté listo"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2016/09/cazuela-de-pollo_.jpg",
+      "categories": ["Sopa", "Tradicional"],
+      "evaluation": 4.7,
+      "preparation_time_in_minutes": 90
+    },
+    {
+      "title": "Chapalele",
+      "description": "Masa de papas y harina cocida al vapor, típica de Chiloé.",
+      "ingredients": ["Papas", "Harina", "Manteca", "Sal"],
+      "steps": ["Hacer la masa", "Formar los chapaleles", "Cocer al vapor"],
+      "image": "https://www.gourmet.cl/wp-content/uploads/2018/09/chapalele-editada.jpg",
+      "categories": ["Tradicional", "Vapor"],
+      "evaluation": 4.6,
+      "preparation_time_in_minutes": 60
     }
 
   ]
