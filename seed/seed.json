@@ -1,18 +1,145 @@
 {
-    "recipes": [
-          {
-            "title": "Choclo",
-            "description": "Choclo",
-            "ingredients": ["Choclo"],
-            "steps": [],
-            "image": "https://example.com/image.jpg"
-          },
-          {
-            "title": "Chicle de Choclo",
-            "description": "Chicle hecho de choclo",
-            "ingredients": ["Choclo", "Chicle"],
-            "steps": [],
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThrZxdTqsMvb9S5A8TZfBYgPDVy0A7Ovi8zQ&s"
-          }
-    ]
+  "recipes": [
+    {
+      "title": "Spaghetti Carbonara",
+      "description": "Un plato clásico de pasta italiana hecho con huevos, queso, panceta y pimienta.",
+      "ingredients": ["Spaghetti", "Huevos", "Queso parmesano", "Panceta", "Pimienta negra"],
+      "steps": ["Hervir la pasta", "Cocinar la panceta", "Mezclar huevos y queso", "Combinar la pasta con la panceta", "Añadir la mezcla de huevos"],
+      "image": "https://example.com/spaghetti-carbonara.jpg",
+      "categories": ["Pasta", "Italiano"],
+      "evaluation": 4.5,
+      "preparation_time": "30 minutos"
+    },
+    {
+      "title": "Ensalada César",
+      "description": "Una ensalada fresca y crujiente con lechuga romana, crutones, queso parmesano y aderezo César.",
+      "ingredients": ["Lechuga romana", "Crutones", "Queso parmesano", "Aderezo César", "Pechuga de pollo (opcional)"],
+      "steps": ["Lavar y cortar la lechuga", "Añadir crutones y queso parmesano", "Agregar el aderezo César", "Incorporar el pollo si se desea"],
+      "image": "https://example.com/ensalada-cesar.jpg",
+      "categories": ["Ensalada", "Italiano"],
+      "evaluation": 4.0,
+      "preparation_time": "15 minutos"
+    },
+    {
+      "title": "Tacos de Pollo",
+      "description": "Deliciosos tacos rellenos de pollo sazonado, acompañados de salsa y guacamole.",
+      "ingredients": ["Tortillas de maíz", "Pollo", "Cilantro", "Cebolla", "Salsa", "Guacamole"],
+      "steps": ["Cocinar el pollo con especias", "Calentar las tortillas", "Rellenar las tortillas con pollo", "Agregar cilantro, cebolla, salsa y guacamole"],
+      "image": "https://example.com/tacos-de-pollo.jpg",
+      "categories": ["Mexicano", "Tacos"],
+      "evaluation": 4.7,
+      "preparation_time": "25 minutos"
+    },
+    {
+      "title": "Paella de Mariscos",
+      "description": "Una tradicional paella española hecha con arroz, mariscos frescos y azafrán.",
+      "ingredients": ["Arroz", "Caldo de pescado", "Mariscos (gambas, mejillones, calamares)", "Azafrán", "Pimientos", "Guisantes"],
+      "steps": ["Cocinar los mariscos", "Añadir el arroz y el azafrán", "Incorporar el caldo de pescado", "Añadir pimientos y guisantes", "Cocinar a fuego lento hasta que el arroz esté listo"],
+      "image": "https://example.com/paella-de-mariscos.jpg",
+      "categories": ["Español", "Mariscos"],
+      "evaluation": 4.8,
+      "preparation_time": "1 hora"
+    },
+    {
+      "title": "Churrasco a lo Pobre",
+      "description": "Un plato tradicional chileno que incluye carne de res, papas fritas, cebolla caramelizada, y un huevo frito.",
+      "ingredients": ["Carne de res", "Papas fritas", "Cebolla", "Huevos", "Aceite", "Sal"],
+      "steps": ["Cocinar la carne a la parrilla", "Freír las papas", "Caramelizar la cebolla", "Freír los huevos", "Servir todo junto en un plato"],
+      "image": "https://example.com/churrasco-a-lo-pobre.jpg",
+      "categories": ["Chileno", "Carnes"],
+      "evaluation": 4.6,
+      "preparation_time": "40 minutos"
+    },
+    {
+      "title": "Empanadas de Pino",
+      "description": "Empanadas chilenas rellenas de carne, cebolla, huevo duro, aceitunas y pasas.",
+      "ingredients": ["Harina", "Carne molida", "Cebolla", "Huevos duros", "Aceitunas", "Pasas"],
+      "steps": ["Preparar la masa", "Cocinar el relleno de carne y cebolla", "Rellenar la masa con carne, huevo, aceitunas y pasas", "Cerrar y hornear las empanadas"],
+      "image": "https://example.com/empanadas-de-pino.jpg",
+      "categories": ["Chileno", "Empanadas"],
+      "evaluation": 4.5,
+      "preparation_time": "1 hora"
+    },
+    {
+      "title": "Pizza Margherita",
+      "description": "Pizza clásica italiana con tomate, mozzarella y albahaca fresca.",
+      "ingredients": ["Masa de pizza", "Tomate", "Mozzarella", "Albahaca", "Aceite de oliva", "Sal"],
+      "steps": ["Precalentar el horno", "Extender la masa", "Añadir tomate y mozzarella", "Hornear", "Agregar albahaca y aceite de oliva"],
+      "image": "https://example.com/pizza-margherita.jpg",
+      "categories": ["Pizza", "Italiano"],
+      "evaluation": 4.4,
+      "preparation_time": "30 minutos"
+    },
+    {
+      "title": "Sushi",
+      "description": "Sushi tradicional japonés con pescado fresco y arroz sazonado.",
+      "ingredients": ["Arroz para sushi", "Vinagre de arroz", "Pescado fresco", "Alga nori", "Salsa de soya", "Jengibre encurtido"],
+      "steps": ["Preparar el arroz", "Cortar el pescado", "Enrollar el sushi", "Cortar en piezas", "Servir con salsa de soya y jengibre"],
+      "image": "https://example.com/sushi.jpg",
+      "categories": ["Japonés", "Sushi"],
+      "evaluation": 4.9,
+      "preparation_time": "45 minutos"
+    },
+    {
+      "title": "Hamburguesa Clásica",
+      "description": "Una hamburguesa clásica con carne de res, queso, lechuga, tomate y mayonesa.",
+      "ingredients": ["Pan de hamburguesa", "Carne de res", "Queso", "Lechuga", "Tomate", "Mayonesa"],
+      "steps": ["Cocinar la carne", "Tostar el pan", "Armar la hamburguesa con todos los ingredientes", "Servir caliente"],
+      "image": "https://example.com/hamburguesa-clasica.jpg",
+      "categories": ["Americano", "Hamburguesa"],
+      "evaluation": 4.6,
+      "preparation_time": "20 minutos"
+    },
+    {
+      "title": "Sopa de Tomate",
+      "description": "Una sopa suave y cremosa hecha con tomates frescos y albahaca.",
+      "ingredients": ["Tomates", "Cebolla", "Ajo", "Caldo de verduras", "Albahaca", "Crema"],
+      "steps": ["Cocinar los tomates y la cebolla", "Añadir el caldo y cocinar a fuego lento", "Licuar la sopa", "Añadir crema y albahaca", "Servir caliente"],
+      "image": "https://example.com/sopa-de-tomate.jpg",
+      "categories": ["Sopa", "Vegetariano"],
+      "evaluation": 4.3,
+      "preparation_time": "40 minutos"
+    },
+    {
+      "title": "Brownies de Chocolate",
+      "description": "Brownies suaves y masticables con un intenso sabor a chocolate.",
+      "ingredients": ["Chocolate", "Mantequilla", "Azúcar", "Huevos", "Harina", "Cacao en polvo"],
+      "steps": ["Derretir el chocolate y la mantequilla", "Mezclar con azúcar y huevos", "Añadir la harina y el cacao", "Hornear", "Dejar enfriar y cortar en cuadros"],
+      "image": "https://example.com/brownies-de-chocolate.jpg",
+      "categories": ["Postre", "Chocolate"],
+      "evaluation": 4.8,
+      "preparation_time": "45 minutos"
+    },
+    {
+      "title": "Ceviche de Pescado",
+      "description": "Un plato peruano de pescado crudo marinado en jugo de limón y mezclado con cebolla, cilantro y ají.",
+      "ingredients": ["Pescado blanco", "Limón", "Cebolla", "Cilantro", "Ají", "Sal"],
+      "steps": ["Cortar el pescado en cubos", "Marinar en jugo de limón", "Añadir cebolla, cilantro y ají", "Servir frío"],
+      "image": "https://example.com/ceviche-de-pescado.jpg",
+      "categories": ["Peruano", "Mariscos"],
+      "evaluation": 4.7,
+      "preparation_time": "20 minutos"
+    },
+    {
+      "title": "Risotto de Champiñones",
+      "description": "Un risotto cremoso con champiñones salteados y queso parmesano.",
+      "ingredients": ["Arroz arborio", "Champiñones", "Caldo de pollo", "Queso parmesano", "Cebolla", "Vino blanco"],
+      "steps": ["Sofreír la cebolla y los champiñones", "Añadir el arroz y el vino blanco", "Incorporar el caldo gradualmente", "Añadir queso parmesano"],
+      "image": "https://example.com/risotto-de-champinones.jpg",
+      "categories": ["Italiano", "Arroz"],
+      "evaluation": 4.6,
+      "preparation_time": "30 minutos"
+    },
+    {
+      "title": "Tarta de Manzana",
+      "description": "Una tarta clásica con una base de masa quebrada, relleno de manzanas y canela, y una cubierta crujiente.",
+      "ingredients": ["Masa quebrada", "Manzanas", "Azúcar", "Canela", "Harina", "Mantequilla"],
+      "steps": ["Forrar un molde con la masa", "Cortar las manzanas y mezclar con azúcar y canela", "Colocar las manzanas en la masa", "Hornear", "Agregar la cubierta de harina y mantequilla"],
+      "image": "https://example.com/tarta-de-manzana.jpg",
+      "categories": ["Postre", "Frutas"],
+      "evaluation": 4.4,
+      "preparation_time": "1 hora"
+    }
+
+  ]
 }
