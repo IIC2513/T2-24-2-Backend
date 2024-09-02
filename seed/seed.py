@@ -14,7 +14,6 @@ async def seed_db():
     session.close()
 
 def seed_table(target, connection, **kw):
-    print(f"Seeding {target}")
     tablename = str(target)
     with open('./seed/seed.json', 'r') as file:
         data = json.load(file)
