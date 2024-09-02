@@ -1,18 +1,14 @@
-from fastapi import FastAPI, HTTPException, Depends, Header
-from pydantic import BaseModel
-from typing import List, Annotated, Optional
+from fastapi import FastAPI, HTTPException, Depends, Header, Query
+from pydantic import BaseModel, Field
+from typing import List, Optional, Annotated
 import models.recipe as models
 from config.database import SessionLocal, engine
 from sqlalchemy.orm import Session
-from sqlalchemy import event
+from sqlalchemy import func, event
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
+from fastapi.middleware.cors import CORSMiddleware
 from seed.seed import seed_db, seed_table
-from pydantic import Field
-from typing import List, Optional
-from fastapi import FastAPI, HTTPException, Query
-from sqlalchemy import func
-
 
 async def start_scheduler():
     scheduler = BackgroundScheduler()
@@ -29,6 +25,14 @@ event.listen(models.Recipes.__table__, 'after_create', seed_table)
 
 app = FastAPI(lifespan=lifespan)
 models.Base.metadata.create_all(bind=engine)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def verify_token(authorization: Optional[str] = Header(None)):
     if authorization is None or not authorization.startswith("Bearer panconqueso"):
@@ -107,7 +111,16 @@ async def get_recipes_by_ingredients(
 
 @app.post("/recipes/", response_model=Recipe)
 async def create_recipe(recipe: RecipeCreate, db: db_dependency, token: token_dependency):
-    db_recipe = models.Recipes(title=recipe.title, description=recipe.description, ingredients=recipe.ingredients, steps=recipe.steps, image=recipe.image, categories=recipe.categories, evaluation=recipe.evaluation, preparation_time=recipe.preparation_time)
+    db_recipe = models.Recipes(
+        title=recipe.title, 
+        description=recipe.description, 
+        ingredients=recipe.ingredients, 
+        steps=recipe.steps, 
+        image=recipe.image, 
+        categories=recipe.categories, 
+        evaluation=recipe.evaluation, 
+        preparation_time=recipe.preparation_time_in_minutes
+    )
     db.add(db_recipe)
     db.commit()
     db.refresh(db_recipe)
