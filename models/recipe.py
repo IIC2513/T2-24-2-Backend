@@ -12,4 +12,4 @@ class Recipes(Base):
     image = Column(String, index=True)
     categories = Column(ARRAY(String), index=True)
     evaluation = Column(Integer, index=True)
-    preparation_time = Column(String, index=True)
+    preparation_time_in_minutes = Column(Integer, index=True)
