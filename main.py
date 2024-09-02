@@ -10,6 +10,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from seed.seed import seed_db, seed_table
 from pydantic import Field
 from typing import List, Optional
+from fastapi import FastAPI, HTTPException, Query
 
 
 async def start_scheduler():
@@ -40,7 +41,7 @@ class RecipeCreate(BaseModel):
     image: str
     categories: List[str]
     evaluation: int
-    preparation_time: str
+    preparation_time_in_minutes: int
 
 class Recipe(BaseModel):
     id: int
@@ -51,7 +52,7 @@ class Recipe(BaseModel):
     image: str
     categories: list = []
     evaluation: int
-    preparation_time: str
+    preparation_time_in_minutes: int
 
 class RecipeUpdate(BaseModel):
     title: Optional[str] = Field(default=None)
@@ -61,7 +62,7 @@ class RecipeUpdate(BaseModel):
     image: Optional[str] = Field(default=None)
     categories: Optional[List[str]] = Field(default=None)
     evaluation: Optional[int] = Field(default=None)
-    preparation_time: Optional[str] = Field(default=None)
+    preparation_time_in_minutes: Optional[int] = Field(default=None)
 
 def get_db():
     db = SessionLocal()
@@ -74,8 +75,14 @@ db_dependency = Annotated[Session, Depends(get_db)]
 token_dependency = Annotated[str, Depends(verify_token)]
 
 @app.get("/recipes/", response_model=List[Recipe])
-async def get_recipes(db: db_dependency, token: token_dependency):
-    recipes = db.query(models.Recipes).all()
+async def get_recipes(
+    db: db_dependency, 
+    token: token_dependency,
+    page: int = Query(1, ge=1),
+    page_size: int = Query(10, ge=1, le=100)
+):
+    offset = (page - 1) * page_size
+    recipes = db.query(models.Recipes).offset(offset).limit(page_size).all()
     return recipes
 
 @app.get("/recipes/{recipe_id}", response_model=Recipe)
