@@ -94,27 +94,14 @@ async def create_recipe(recipe: RecipeCreate, db: db_dependency, token: token_de
     return db_recipe
 
 @app.patch("/recipes/{recipe_id}", response_model=Recipe)
-async def update_recipe(recipe_id: int, recipe: RecipeUpdate, db: db_dependency, token: token_dependency):
+async def update_recipe(recipe_id: int, recipe: RecipeUpdate, db: Session = Depends(get_db), token: str = Depends(verify_token)):
     db_recipe = db.query(models.Recipes).filter(models.Recipes.id == recipe_id).first()
     if db_recipe is None:
         raise HTTPException(status_code=404, detail="Recipe not found")
 
-    if recipe.title is not None:
-        db_recipe.title = recipe.title
-    if recipe.description is not None:
-        db_recipe.description = recipe.description
-    if recipe.ingredients is not None:
-        db_recipe.ingredients = recipe.ingredients
-    if recipe.steps is not None:
-        db_recipe.steps = recipe.steps
-    if recipe.image is not None:
-        db_recipe.image = recipe.image
-    if recipe.categories is not None:
-        db_recipe.categories = recipe.categories
-    if recipe.evaluation is not None:
-        db_recipe.evaluation = recipe.evaluation
-    if recipe.preparation_time is not None:
-        db_recipe.preparation_time = recipe.preparation_time
+    recipe_data = recipe.dict(exclude_unset=True)
+    for key, value in recipe_data.items():
+        setattr(db_recipe, key, value)
 
     db.commit()
     db.refresh(db_recipe)
