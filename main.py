@@ -8,6 +8,9 @@ from sqlalchemy import event
 from contextlib import asynccontextmanager
 from apscheduler.schedulers.background import BackgroundScheduler
 from seed.seed import seed_db, seed_table
+from pydantic import Field
+from typing import List, Optional
+
 
 async def start_scheduler():
     scheduler = BackgroundScheduler()
@@ -35,6 +38,9 @@ class RecipeCreate(BaseModel):
     ingredients: List[str]
     steps: List[str]
     image: str
+    categories: List[str]
+    evaluation: int
+    preparation_time: str
 
 class Recipe(BaseModel):
     id: int
@@ -43,6 +49,19 @@ class Recipe(BaseModel):
     ingredients: list = []
     steps: list = []
     image: str
+    categories: list = []
+    evaluation: int
+    preparation_time: str
+
+class RecipeUpdate(BaseModel):
+    title: Optional[str] = Field(default=None)
+    description: Optional[str] = Field(default=None)
+    ingredients: Optional[List[str]] = Field(default=None)
+    steps: Optional[List[str]] = Field(default=None)
+    image: Optional[str] = Field(default=None)
+    categories: Optional[List[str]] = Field(default=None)
+    evaluation: Optional[int] = Field(default=None)
+    preparation_time: Optional[str] = Field(default=None)
 
 def get_db():
     db = SessionLocal()
@@ -68,8 +87,35 @@ async def get_recipe(recipe_id: int, db: db_dependency, token: token_dependency)
 
 @app.post("/recipes/", response_model=Recipe)
 async def create_recipe(recipe: RecipeCreate, db: db_dependency, token: token_dependency):
-    db_recipe = models.Recipes(title=recipe.title, description=recipe.description, ingredients=recipe.ingredients, steps=recipe.steps, image=recipe.image)
+    db_recipe = models.Recipes(title=recipe.title, description=recipe.description, ingredients=recipe.ingredients, steps=recipe.steps, image=recipe.image, categories=recipe.categories, evaluation=recipe.evaluation, preparation_time=recipe.preparation_time)
     db.add(db_recipe)
+    db.commit()
+    db.refresh(db_recipe)
+    return db_recipe
+
+@app.patch("/recipes/{recipe_id}", response_model=Recipe)
+async def update_recipe(recipe_id: int, recipe: RecipeUpdate, db: db_dependency, token: token_dependency):
+    db_recipe = db.query(models.Recipes).filter(models.Recipes.id == recipe_id).first()
+    if db_recipe is None:
+        raise HTTPException(status_code=404, detail="Recipe not found")
+
+    if recipe.title is not None:
+        db_recipe.title = recipe.title
+    if recipe.description is not None:
+        db_recipe.description = recipe.description
+    if recipe.ingredients is not None:
+        db_recipe.ingredients = recipe.ingredients
+    if recipe.steps is not None:
+        db_recipe.steps = recipe.steps
+    if recipe.image is not None:
+        db_recipe.image = recipe.image
+    if recipe.categories is not None:
+        db_recipe.categories = recipe.categories
+    if recipe.evaluation is not None:
+        db_recipe.evaluation = recipe.evaluation
+    if recipe.preparation_time is not None:
+        db_recipe.preparation_time = recipe.preparation_time
+
     db.commit()
     db.refresh(db_recipe)
     return db_recipe
