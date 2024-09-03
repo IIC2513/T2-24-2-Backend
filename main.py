@@ -119,7 +119,7 @@ async def create_recipe(recipe: RecipeCreate, db: db_dependency, token: token_de
         image=recipe.image, 
         categories=recipe.categories, 
         evaluation=recipe.evaluation, 
-        preparation_time=recipe.preparation_time_in_minutes
+        preparation_time_in_minutes=recipe.preparation_time_in_minutes
     )
     db.add(db_recipe)
     db.commit()
